@@ -1,0 +1,24 @@
+How to solve power in modulo
+
+Ex: 18^23 mod 55
+
+Take the exponent (23) and transform it to binary: 10111. Then let's say that C0 = 1 and we write:
+
+1 => C0^2 * 18^1 = C1 mod 55
+0 => C1^2 * 18^0 = C2 mod 55
+1 => C2^2 * 18^1 = C3 mod 55
+1 => C3^2 * 18^1 = C4 mod 55
+1 => C4^2 * 18^1 = result mod 55
+
+------------------
+How to find the modulo using the bad calculator of the exam:
+
+- Make the division in order to get the quotient (ex. 256 / 5 = 51,2)
+- Multiply the integer part of the quotient with the divider (ex. 51 * 5 = 255)
+- Subtract the result of previous operation to the starting number to get the result (ex. 256 - 255 = 1)
+
+Example: the remainder of 256 mod 5 is:
+
+256 / 5 = 51,2
+51 * 5 = 255
+256 - 255 = 1 <- Result
